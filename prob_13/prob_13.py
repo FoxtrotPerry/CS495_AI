@@ -9,21 +9,13 @@ def coolSlow(i): # Is in the cool state and has decided to take the slow route
     return (1.0 * (1 + (gamma**i * prev_cool[-1])))
 def warmSlow(i): # Is in the warm state and has decided to take the slow route
     warm_path = 0.5 * (1.0 + (gamma**i * prev_warm[-1]))
-    # print("Future Warm:" + str(warm_path))
-    # print("====")
-    # print(gamma**i)
-    # print(prev_cool[-1])
     cool_path = 0.5 * (1.0 + (gamma**i * prev_cool[-1]))
-    # print("Future Cool:" + str(cool_path))
-    # print("====")
     return warm_path + cool_path
 def warmFast(): # This leads to a dead state why would you ever call this?
     return (0)
 
 for i in range(0,k):
     print("Iteration: " + str(i+1))
-    # print("Cool List: " + str(prev_cool[-1]))
-    # print("Warm List: " + str(prev_warm[-1]))
     # Deciding which cool to use:
     coolFast_val = coolFast(i)
     coolSlow_val = coolSlow(i)
