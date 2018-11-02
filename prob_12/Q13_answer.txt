@@ -1,0 +1,17 @@
+Caleb Perry, Michaela Laden, Tucker Mogren, Kyle Saunders
+
+Problem 12:
+
+a) 
+
+Personal Local Optima Log for Hill Climbing:
+
+27023377358286572427835560143
+
+b)
+
+The slower cooling definitely helped in getting a higher score and better solution. My solution to
+mutate my algorithm was to pick a random bit from the bit array that produced the best result so far and
+flipping it to its opposite value and pushing that new array into a temporary array that could then
+be evaluated. If the temporary array is better than the previously saved best solution then the temp
+array overwrites the best solution.
